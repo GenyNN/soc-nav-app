@@ -1,0 +1,8 @@
+<h1>Networks</h1>
+<table class="table">
+  <tr *ngFor="let network of networks">
+    <td>
+      <a [routerLink]="['/networks', network.id]">{{network.name}}</a>
+    </td>
+  </tr>
+</table>

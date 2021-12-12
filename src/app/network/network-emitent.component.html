@@ -1,0 +1,19 @@
+<h1>{{network.name}}</h1>
+<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail">
+      <img [src]="network.image">
+      <div class="caption">
+        <table class="table">
+          <tr *ngFor="let emitent of network.emitents">
+            <td>
+              <a [routerLink]="['/emitents', emitent.id]">{{emitent.title}}</a>
+            </td>
+            <!--<td>{{album.year}}</td>-->
+          </tr>
+        </table>
+        <div [innerHTML]="network.description"></div>
+      </div>
+    </div>
+  </div>
+</div>
